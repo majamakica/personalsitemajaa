@@ -1,0 +1,530 @@
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+
+body{
+	background-image: url("https://img.freepik.com/premium-photo/orange-rough-brick-wall-concrete-floor-with-lighting_208465-2.jpg?w=900");
+}
+
+
+p{
+	background-color: white;
+	font-family: cursive;
+	font-size: 18px;
+}
+
+
+a{
+  color: #0A2647;
+  font-family: "Montserrat",sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+	text-align: center;
+
+}
+
+.majaheading{
+	text-align: center;
+	color: white;
+  min-height: 2vh;
+	background-color: black;
+	width: 33%;
+  margin: 100px auto 100px auto;
+}
+
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+.content{
+	display: flex;
+	/* background-image: url("http://luciousdreams.tumblr.com/post/87137711662"); */
+	min-height: 30vh;
+	align-items: center;
+	justify-content: center;
+  font-size: 12px;
+  text-align: center;
+}
+
+.content {
+	position: relative;
+}
+
+.content h2 {
+	color: black;
+	font-size: 8em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px black;
+}
+
+.content h2:nth-child(2) {
+	color: #E11299;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    position: relative;
+    line-height: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-nav li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 3px;
+    background-color: #1c1c1c;
+    -webkit-transition: width .2s ease-in;
+      -moz-transition:  width .2s ease-in;
+       -ms-transition:  width .2s ease-in;
+       -o-transition:  width .2s ease-in;
+            transition: width .2s ease-in;
+
+}
+.sidebar-nav li:first-child a {
+    color: #fff;
+    background-color: #1a1a1a;
+}
+.sidebar-nav li:nth-child(2):before {
+    background-color: #ec1b5a;
+}
+.sidebar-nav li:nth-child(3):before {
+    background-color: #79aefe;
+}
+.sidebar-nav li:nth-child(4):before {
+    background-color: #314190;
+}
+.sidebar-nav li:nth-child(5):before {
+    background-color: #279636;
+}
+.sidebar-nav li:nth-child(6):before {
+    background-color: #7d5d81;
+}
+.sidebar-nav li:nth-child(7):before {
+    background-color: #ead24c;
+}
+.sidebar-nav li:nth-child(8):before {
+    background-color: #2d2366;
+}
+.sidebar-nav li:nth-child(9):before {
+    background-color: #35acdf;
+}
+.sidebar-nav li:hover:before,
+.sidebar-nav li.open:hover:before {
+    width: 100%;
+    -webkit-transition: width .2s ease-in;
+      -moz-transition:  width .2s ease-in;
+       -ms-transition:  width .2s ease-in;
+       -o-transition: width .2s ease-in;
+            transition: width .2s ease-in;
+
+}
+
+.sidebar-nav li a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px 15px 10px 30px;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus,
+.sidebar-nav li.open a:hover,
+.sidebar-nav li.open a:active,
+.sidebar-nav li.open a:focus{
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 20px;
+    line-height: 44px;
+}
+.sidebar-nav .dropdown-menu {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    background-color: #222;
+    box-shadow: none;
+}
+
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  z-index: 999;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-left: 15px;
+  background: transparent;
+  border: none;
+}
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+  outline: none;
+}
+.hamburger.is-closed:before {
+  content: '';
+  display: block;
+  width: 100px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -webkit-transition: all .35s ease-in-out;
+  -o-transition: all .35s ease-in-out;
+  -moz-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed:hover:before {
+  opacity: 1;
+  display: block;
+  -webkit-transform: translate3d(-100px,0,0);
+  -moz-transform: translate3d(-100px,0,0);
+  -o-transform: translate3d(-100px,0,0);
+  -ms-transform: translate3d(-100px,0,0);
+  -webkit-transition: all .35s ease-in-out;
+  -moz-transition: all .35s ease-in-out;
+  -o-transition: all .35s ease-in-out;
+  -ms-transition: all .35s ease-in-out;
+}
+
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 100%;
+}
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom {
+  background-color: #1a1a1a;
+}
+.hamburger.is-closed .hamb-top {
+  top: 5px;
+  -webkit-transition: all .35s ease-in-out;
+  -moz-transition: all .35s ease-in-out;
+  -o-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed .hamb-middle {
+  top: 50%;
+  margin-top: -2px;
+}
+
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+.content-header{
+	background-image: url("https://media4.giphy.com/media/kuL88svB3YuesOtKJ5/giphy.gif?cid=ecf05e47633r8nlkxkt69xeekq8x7n56ou9e1bbt0g5sdwno&ep=v1_gifs_related&rid=giphy.gif&ct=s");
+  /* background-image:url("https://media.giphy.com/media/1300w1HkjihpIY/giphy.gif"); */
+	min-height: 45vh;
+  font-size: 80px;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 900;
+  color: black;
+  border: 4px solid pink;
+  border-radius: 60%;
+	/* background-repeat: no-repeat; */
+
+}
+
+
+.intro{
+  padding-top: 20px;
+  padding-bottom: 15px;
+	background-color: white;
+}
+
+.img-responsive1{
+  height: 270px;
+  width: 340px;
+  border-radius: 98px;
+	float: left;
+	width: 35%;
+	height: 30%;
+  margin-left: 30px;
+	border: 5px solid #D21312;
+	/* padding-top: 10px;
+	padding-bottom: 25px; */
+
+}
+.img-responsive2{
+  height: 250px;
+  width: 270px;
+  border-radius: 98px;
+	float: right;
+  width: 35%;
+  height: 30%;
+  margin-right: 30px;
+  border: 5px solid #D21312;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row3::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img-responsive3{
+	width: 100%;
+}
+.shorth{
+	font-size: 24px;
+	background-color: white;
+	padding-bottom: 17px;
+
+}
+
+.row2{
+	width: 88%;
+ margin: 100px auto 100px auto;
+ text-align: left;
+}
+
+.img-responsive4{
+	width: 100%;
+	height: 70%;
+}
+.img-responsive5{
+	width: 56%;
+}
+
+.btn2 {
+ -webkit-border-radius: 60;
+ -moz-border-radius: 60;
+ border-radius: 60px;
+ font-family: Georgia;
+ color: #ffffff;
+ font-size: 30px;
+ background: #4081ad;
+ padding: 11px 20px 11px 20px;
+ border: solid #37306B 9px;
+ text-decoration: none;
+
+}
+
+.btn2:hover {
+ background: #10dfe6;
+ background-image: -webkit-linear-gradient(top, #10dfe6, #1dbbe3);
+ background-image: -moz-linear-gradient(top, #10dfe6, #1dbbe3);
+ background-image: -ms-linear-gradient(top, #10dfe6, #1dbbe3);
+ background-image: -o-linear-gradient(top, #10dfe6, #1dbbe3);
+ background-image: linear-gradient(to bottom, #10dfe6, #1dbbe3);
+ text-decoration: none;
+}
+
+
+
+.contact-me{
+  background-image: url("https://img.freepik.com/free-photo/telephone-laptop-flat-lay-with-workspace-on-yellow-background_140725-23283.jpg?w=900&t=st=1681903374~exp=1681903974~hmac=1e1f469ee8b5f23da789a0bd6324f68daca6330d23281c3b6a244dc1c7bb0d5d");
+  height: 200px;
+	width: 100%;
+  padding-top: 40px;
+	padding-left: 290px;
+	border-radius: 40%;
+}
+
+
+
+.bottom-container{
+  background-color:white;
+  padding-left: 100px;
+  padding-top: 20px;
+
+}
+
+
+.copyright{
+  color: black;
+  font-size: 12px;;
+  padding: 20px 0;
+}
+
+
+
+#anch1{
+	padding-bottom: 30px;
+	background-color: white;
+	font-family: "Copperplate",fantasy;
+	font-size: 38px;
+}
+#anch2{
+	padding-bottom: 30px;
+	background-color: white;
+	font-family: "Copperplate",fantasy;
+	font-size: 38px;
+	text-align: right;
+}
+
+#anch3{
+	padding-top: 15px;
+	padding-bottom: 37px;
+	background-color: white;
+	font-family: "Copperplate",fantasy;
+	font-size: 39px;
+}
+
+
+ #wrapper {
+  padding-left: 250px;
+  padding-right: 7%;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  background: #000;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#wrapper.active {
+  padding-left: 0;
+}
+
+#wrapper.active #sidebar-wrapper {
+  left: 0;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+
+
+
+#page-content-wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+}
+
+}
